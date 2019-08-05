@@ -32,7 +32,7 @@ code {
 }
 
 .App {
-  background-image: url("https://github.com/akeimach/wedding-website/blob/master/public/images/eucalyptus-upper.png?raw=true");
+  background-image: url("../images/eucalyptus-upper.png");
   height: 678px;
   background-position: center;
   background-repeat: no-repeat;
