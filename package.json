@@ -4,7 +4,7 @@
   "description": "DIY wedding website for Alyssa and Danny's wedding, August 2020!",
   "author": "Alyssa Keimach",
   "license": "ISC",
-  "homepage": "https://github.com/akeimach/wedding-website#readme",
+  "homepage": "http://dannyandalyssa.com/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akeimach/wedding-website.git"
@@ -26,6 +26,8 @@
     "typescript": "3.5.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
