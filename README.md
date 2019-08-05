@@ -1,2 +1,0 @@
-# wedding-website
-Wedding website
