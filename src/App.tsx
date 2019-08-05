@@ -1,11 +1,10 @@
 import React from 'react';
-import Nav from './Nav';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Nav/ >
-      <img src="./images/IMG_8787.jpg" style={{ maxWidth: "100%" }} />
+      <p className="save-the-date">Danny and Alyssa's wedding<br />August 15, 2020</p>
+      <p className="details">Check back later for more details</p>
     </div>
   );
 }

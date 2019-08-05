@@ -30,3 +30,23 @@ code {
 .Nav-link {
   color: #ffffff;
 }
+
+.App {
+  background-image: url(./IMG_8797.png);
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.save-the-date,
+.details {
+  color: #5d684b;
+  font-weight: 200;
+}
+
+.save-the-date {
+  margin: 0;
+  font-size: 25px;
+  padding: 321px 0;
+}
