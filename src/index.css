@@ -32,8 +32,8 @@ code {
 }
 
 .App {
-  background-image: url("https://github.com/akeimach/wedding-website/blob/master/public/images/background-wreath.png?raw=true");
-  height: 700px;
+  background-image: url("https://github.com/akeimach/wedding-website/blob/master/public/images/eucalyptus-upper.png?raw=true");
+  height: 678px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,5 +48,5 @@ code {
 .save-the-date {
   margin: 0;
   font-size: 25px;
-  padding: 321px 0;
+  padding-top: 400px;
 }
