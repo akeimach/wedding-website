@@ -45,6 +45,17 @@ code {
   font-weight: 200;
 }
 
+.add-to-calendar,
+.add-to-calendar-dropdown,
+.add-to-calendar-dropdown a {
+  color: #5d684b;
+}
+
+.add-to-calendar-dropdown ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
 .save-the-date {
   margin: 0;
   font-size: 25px;
