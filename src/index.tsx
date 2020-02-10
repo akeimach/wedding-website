@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { ReactElement, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Details from './components/Details';
+import Accommodations from './components/Accommodations';
 import * as serviceWorker from './serviceWorker';
+
+export const blockStyle: CSSProperties = {
+  textAlign: 'center',
+  fontSize: '20px',
+  height: '600px',
+  padding: '100px 0',
+};
+
+const App = (): ReactElement => {
+  return (
+    <div>
+      <Nav />
+      <Home />
+      <Details />
+      <Accommodations />
+    </div>
+  );
+}
 
 ReactDOM.render(
   <BrowserRouter>
@@ -10,7 +31,4 @@ ReactDOM.render(
   </BrowserRouter>, document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
