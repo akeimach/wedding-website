@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #054b30;
+  /* color: #5d684b; */
+  font-weight: 200;
 }
 
 code {
@@ -12,41 +15,6 @@ code {
     monospace;
 }
 
-.App {
-  text-align: center;
-}
-
-.Nav-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.Nav-link {
-  color: #ffffff;
-}
-
-.App {
-  background-image: url("../images/eucalyptus-upper.png");
-  height: 678px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.save-the-date,
-.details {
-  color: #5d684b;
-  font-weight: 200;
-}
-
-.add-to-calendar,
-.add-to-calendar-dropdown,
 .add-to-calendar-dropdown a {
   color: #5d684b;
 }
@@ -54,10 +22,4 @@ code {
 .add-to-calendar-dropdown ul {
   list-style: none;
   padding-inline-start: 0;
-}
-
-.save-the-date {
-  margin: 0;
-  font-size: 25px;
-  padding-top: 400px;
 }
