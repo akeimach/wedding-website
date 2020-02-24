@@ -12,7 +12,7 @@ const boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
 
 export const flexRowStyle: CSSProperties = {
   alignContent: 'center',
-  alignItems: 'center',
+  alignItems: 'flex-top',
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
@@ -102,8 +102,13 @@ export const calendarLinksStyle: CSSProperties = {
 export const detailsStyle: CSSProperties = {
   background: darkGreen,
   color: white,
-  height: '140px',
   padding: '100px 0',
+};
+
+export const detailBoxStyle: CSSProperties = {
+  maxWidth: '400px',
+  padding: '30px',
+  margin: '10px',
 };
 
 export const mapStyle: CSSProperties = {
@@ -125,4 +130,10 @@ export const hotelBoxStyle: CSSProperties = {
   padding: '30px',
   margin: '10px',
   boxShadow,
+};
+
+export const detailsFont: CSSProperties = {
+  fontSize: '16px',
+  opacity: 0.6,
+  padding: '5px',
 };
