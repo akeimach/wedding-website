@@ -26,7 +26,7 @@ const detailsInfoArray: DetailsInfo[] = [
   {
     label: 'Ceremony & Reception',
     location: 'The Faculty Club',
-    date: 'Friday, August 15',
+    date: 'Saturday, August 15',
     time: '4pm - 10pm',
     blurb:
       'Both our ceremony and reception are at the Faculty Club on UC Berkeley campus.',
@@ -34,7 +34,7 @@ const detailsInfoArray: DetailsInfo[] = [
   {
     label: 'After Party',
     location: 'TBD',
-    date: 'Friday, August 15',
+    date: 'Saturday, August 15',
     time: '10pm - 2am',
     blurb:
       "Don't wanna stop dancing? We are planning an after party! We'll update here once we iron out the details.",
