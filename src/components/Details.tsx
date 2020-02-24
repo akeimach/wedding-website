@@ -37,7 +37,7 @@ const detailsInfoArray: DetailsInfo[] = [
     date: 'Friday, August 15',
     time: '10pm - 2am',
     blurb:
-      "Don't wanna stop dancing? We are planning an after party! We'll update here when we iron out the details.",
+      "Don't wanna stop dancing? We are planning an after party! We'll update here once we iron out the details.",
   },
 ];
 
