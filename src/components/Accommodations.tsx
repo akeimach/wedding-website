@@ -49,7 +49,7 @@ const LocationBox = ({
 const Accommodations = (): ReactElement => (
   <div id="Accommodations" style={accomodationsStyle}>
     {locationInfoArray.map((info: LocationInfo) => (
-      <LocationBox {...info} />
+      <LocationBox {...info} key={info.label} />
     ))}
   </div>
 );

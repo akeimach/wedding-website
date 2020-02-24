@@ -42,7 +42,7 @@ const MapMarker = ({ label }: MarkerInfo) => (
 const Map = (): ReactElement => (
   <div style={mapStyle}>
     <GoogleMapReact
-      bootstrapURLKeys={{ key: 'AIzaSyDpmAfWZqAxQmRncgOYD-QhsTPXCCoq4PE' }}
+      bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_API_KEY || '' }}
       defaultCenter={{
         lat: 37.836576,
         lng: -122.227777,
@@ -50,7 +50,7 @@ const Map = (): ReactElement => (
       defaultZoom={12.5}
     >
       {mapInfoArray.map((info: MarkerInfo) => (
-        <MapMarker {...info} />
+        <MapMarker {...info} key={info.label} />
       ))}
     </GoogleMapReact>
   </div>

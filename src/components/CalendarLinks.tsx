@@ -58,7 +58,7 @@ const CalendarLinks = (): ReactElement => {
           Add To Calendar
           <ul style={calendarLinksStyle}>
             {calendarInfoArray.map((info: LinkInfo) => (
-              <CalendarLink {...info} />
+              <CalendarLink {...info} key={info.label} />
             ))}
           </ul>
         </div>

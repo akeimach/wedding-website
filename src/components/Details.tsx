@@ -42,7 +42,7 @@ const DetailItem = ({
 }: DetailsInfo): ReactElement => (
   <div style={detailBoxStyle}>
     <h4>{label}</h4>
-    <p>
+    <div>
       {location}
       <div style={detailsFont}>
         {date}
@@ -50,7 +50,7 @@ const DetailItem = ({
         {time}
       </div>
       {blurb}
-    </p>
+    </div>
   </div>
 );
 
@@ -59,7 +59,7 @@ const Details = (): ReactElement => (
     <h3>Details</h3>
     <div style={flexRowStyle}>
       {detailsInfoArray.map((info: DetailsInfo) => (
-        <DetailItem {...info} />
+        <DetailItem {...info} key={info.label} />
       ))}
     </div>
   </div>
