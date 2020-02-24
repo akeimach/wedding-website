@@ -20,6 +20,6 @@ const Details = (): ReactElement => {
       </div>
     </div>
   );
-}
+};
 
 export default Details;

@@ -7,7 +7,7 @@ interface MarkerInfo {
   label: string;
   lat: number;
   lng: number;
-};
+}
 
 const mapInfoArray: MarkerInfo[] = [
   {
@@ -19,15 +19,15 @@ const mapInfoArray: MarkerInfo[] = [
     label: 'Bancroft Hotel',
     lat: 37.869124,
     lng: -122.255098,
-  }
-  ,{
+  },
+  {
     label: 'Berkeley City Club',
-    lat: 37.867510,
+    lat: 37.86751,
     lng: -122.262759,
   },
   {
     label: 'Roberts Redwood Regional Park',
-    lat: 37.812190,
+    lat: 37.81219,
     lng: -122.175133,
   },
 ];
@@ -50,10 +50,12 @@ const Map = (): ReactElement => {
         }}
         defaultZoom={12.5}
       >
-        {mapInfoArray.map((info: MarkerInfo) => <MapMarker {...info} />)}
+        {mapInfoArray.map((info: MarkerInfo) => (
+          <MapMarker {...info} />
+        ))}
       </GoogleMapReact>
     </div>
   );
-}
+};
 
 export default Map;

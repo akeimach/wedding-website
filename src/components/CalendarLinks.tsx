@@ -1,11 +1,16 @@
 import React, { ReactElement } from 'react';
 import Popover from 'react-tiny-popover';
-import { popoverContainerStyle, calendarLinksStyle, popoverLinkStyle, linkStyle } from '../constants/style';
+import {
+  popoverContainerStyle,
+  calendarLinksStyle,
+  popoverLinkStyle,
+  linkStyle,
+} from '../constants/style';
 
 interface LinkInfo {
   label: string;
   href: string;
-};
+}
 
 const event = {
   title: "Alyssa and Danny's Wedding",
@@ -27,18 +32,12 @@ const calendarInfoArray: LinkInfo[] = [
   {
     label: 'Yahoo',
     href: `https://calendar.yahoo.com/?v=60&view=d&type=20&title=${event.title}&st=${event.startTime}&dur=7:00&desc=${event.description}&in_loc=${event.location}`,
-
   },
 ];
 
 const CalendarLink = ({ href, label }: LinkInfo): ReactElement => (
   <li>
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={linkStyle}
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer" style={linkStyle}>
       {label}
     </a>
   </li>
@@ -58,7 +57,9 @@ const CalendarLinks = (): ReactElement => {
         <div style={linkStyle}>
           Add To Calendar
           <ul style={calendarLinksStyle}>
-            {calendarInfoArray.map((info: LinkInfo) => <CalendarLink {...info} />)}
+            {calendarInfoArray.map((info: LinkInfo) => (
+              <CalendarLink {...info} />
+            ))}
           </ul>
         </div>
       )}
