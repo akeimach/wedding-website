@@ -116,7 +116,7 @@ export const mapStyle: CSSProperties = {
   width: '100%',
 };
 
-export const accomodationsStyle: CSSProperties = {
+export const accommodationsStyle: CSSProperties = {
   ...flexRowStyle,
   alignItems: 'stretch',
   backgroundImage: 'url("../images/branch-frame.png")',
@@ -131,8 +131,13 @@ export const hotelBoxStyle: CSSProperties = {
   boxShadow,
 };
 
-export const detailsFont: CSSProperties = {
+export const detailsSubFont: CSSProperties = {
   fontSize: '16px',
   opacity: 0.6,
   padding: '5px',
+};
+
+export const accommodationsSubFont: CSSProperties = {
+  ...detailsSubFont,
+  color: darkGreen,
 };

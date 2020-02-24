@@ -3,7 +3,7 @@ import {
   detailsStyle,
   flexRowStyle,
   detailBoxStyle,
-  detailsFont,
+  detailsSubFont,
 } from '../constants/style';
 
 interface DetailsInfo {
@@ -52,7 +52,7 @@ const DetailItem = ({
     <h4>{label}</h4>
     <div>
       {location}
-      <div style={detailsFont}>
+      <div style={detailsSubFont}>
         {date}
         <br />
         {time}

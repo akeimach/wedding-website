@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import {
-  accomodationsStyle,
+  accommodationsStyle,
   hotelBoxStyle,
-  detailsFont,
+  accommodationsSubFont,
 } from '../constants/style';
 
 interface LocationInfo {
@@ -38,16 +38,15 @@ const LocationBox = ({
   <div style={hotelBoxStyle}>
     <h4>{label}</h4>
     <p>{blurb}</p>
-    <div style={detailsFont}>
-      Block rate: {price}
-      <br />
+    <div style={accommodationsSubFont}>Block rate: {price}</div>
+    <a href={`tel:${contact}`} style={accommodationsSubFont}>
       {contact}
-    </div>
+    </a>
   </div>
 );
 
 const Accommodations = (): ReactElement => (
-  <div id="Accommodations" style={accomodationsStyle}>
+  <div id="Accommodations" style={accommodationsStyle}>
     {locationInfoArray.map((info: LocationInfo) => (
       <LocationBox {...info} key={info.label} />
     ))}
