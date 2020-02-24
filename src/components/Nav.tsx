@@ -12,14 +12,12 @@ const StyledNavLink = ({
   </NavLink>
 );
 
-const Nav = (): ReactElement => {
-  return (
-    <div style={navStyle}>
-      <StyledNavLink destination="Home" />
-      <StyledNavLink destination="Details" />
-      <StyledNavLink destination="Accommodations" />
-    </div>
-  );
-};
+const Nav = (): ReactElement => (
+  <div style={navStyle}>
+    <StyledNavLink destination="Home" />
+    <StyledNavLink destination="Details" />
+    <StyledNavLink destination="Accommodations" />
+  </div>
+);
 
 export default Nav;

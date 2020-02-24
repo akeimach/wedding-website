@@ -39,23 +39,21 @@ const MapMarker = ({ label }: MarkerInfo) => (
   </div>
 );
 
-const Map = (): ReactElement => {
-  return (
-    <div style={mapStyle}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyDpmAfWZqAxQmRncgOYD-QhsTPXCCoq4PE' }}
-        defaultCenter={{
-          lat: 37.836576,
-          lng: -122.227777,
-        }}
-        defaultZoom={12.5}
-      >
-        {mapInfoArray.map((info: MarkerInfo) => (
-          <MapMarker {...info} />
-        ))}
-      </GoogleMapReact>
-    </div>
-  );
-};
+const Map = (): ReactElement => (
+  <div style={mapStyle}>
+    <GoogleMapReact
+      bootstrapURLKeys={{ key: 'AIzaSyDpmAfWZqAxQmRncgOYD-QhsTPXCCoq4PE' }}
+      defaultCenter={{
+        lat: 37.836576,
+        lng: -122.227777,
+      }}
+      defaultZoom={12.5}
+    >
+      {mapInfoArray.map((info: MarkerInfo) => (
+        <MapMarker {...info} />
+      ))}
+    </GoogleMapReact>
+  </div>
+);
 
 export default Map;

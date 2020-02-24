@@ -9,17 +9,15 @@ import Map from './components/Map';
 import Accommodations from './components/Accommodations';
 import * as serviceWorker from './serviceWorker';
 
-const App = (): ReactElement => {
-  return (
-    <div style={fontStyle}>
-      <Nav />
-      <Home />
-      <Details />
-      <Map />
-      <Accommodations />
-    </div>
-  );
-};
+const App = (): ReactElement => (
+  <div style={fontStyle}>
+    <Nav />
+    <Home />
+    <Details />
+    <Map />
+    <Accommodations />
+  </div>
+);
 
 ReactDOM.render(
   <BrowserRouter>

@@ -26,14 +26,12 @@ const LocationBox = ({ label, blurb }: LocationInfo): ReactElement => (
   </div>
 );
 
-const Accommodations = (): ReactElement => {
-  return (
-    <div id="Accommodations" style={accomodationsStyle}>
-      {locationInfoArray.map((info: LocationInfo) => (
-        <LocationBox {...info} />
-      ))}
-    </div>
-  );
-};
+const Accommodations = (): ReactElement => (
+  <div id="Accommodations" style={accomodationsStyle}>
+    {locationInfoArray.map((info: LocationInfo) => (
+      <LocationBox {...info} />
+    ))}
+  </div>
+);
 
 export default Accommodations;
