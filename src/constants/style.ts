@@ -43,8 +43,8 @@ export const navStyle: CSSProperties = {
 
 export const navLinkStyle: CSSProperties = {
   ...linkStyle,
-  textDecoration: 'none',
   minWidth: '20%',
+  textDecoration: 'none',
 };
 
 export const homeStyle: CSSProperties = {
@@ -54,12 +54,11 @@ export const homeStyle: CSSProperties = {
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-  minHeight: '100vh',
   filter: `drop-shadow(${boxShadow})`,
+  minHeight: '100vh',
 };
 
 export const notchBoxStyle: CSSProperties = {
-  fontSize: fontSizeHome,
   background: white,
   clipPath: `polygon(
     0% ${notchSize},
@@ -74,6 +73,7 @@ export const notchBoxStyle: CSSProperties = {
     ${notchSize} 100%,
     ${notchSize} ${calcNotchSize},
     0% ${calcNotchSize})`,
+  fontSize: fontSizeHome,
   maxWidth: '600px',
   padding: '3rem',
 };
@@ -83,15 +83,15 @@ export const popoverLinkStyle: CSSProperties = {
   border: 'none',
   cursor: 'pointer',
   fontSize: fontSizeHome,
+  outline: 'none',
   padding: 0,
   textDecoration: 'underline',
-  outline: 'none',
 };
 
 export const popoverContainerStyle: CSSProperties = {
   background: translucentDarkGreen,
-  padding: '30px',
   boxShadow,
+  padding: '30px',
 };
 
 export const calendarLinksStyle: CSSProperties = {
@@ -106,9 +106,9 @@ export const detailsStyle: CSSProperties = {
 };
 
 export const detailBoxStyle: CSSProperties = {
-  maxWidth: '400px',
-  padding: '30px',
   margin: '10px',
+  maxWidth: '300px',
+  padding: '30px',
 };
 
 export const mapStyle: CSSProperties = {
@@ -119,16 +119,15 @@ export const mapStyle: CSSProperties = {
 export const accomodationsStyle: CSSProperties = {
   ...flexRowStyle,
   alignItems: 'stretch',
-  padding: '100px 0',
   backgroundImage: 'url("../images/branch-frame.png")',
+  backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
+  padding: '100px 0',
 };
 
 export const hotelBoxStyle: CSSProperties = {
-  maxWidth: '200px',
+  ...detailBoxStyle,
   background: white,
-  padding: '30px',
-  margin: '10px',
   boxShadow,
 };
 

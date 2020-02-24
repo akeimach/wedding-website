@@ -24,12 +24,20 @@ const detailsInfoArray: DetailsInfo[] = [
       'Join us for a low key dinner in our favorite Bay Area park. Food, drinks, and games will be provided.',
   },
   {
-    label: 'Wedding Ceremony and Reception',
+    label: 'Ceremony & Reception',
     location: 'The Faculty Club',
     date: 'Friday, August 15',
     time: '4pm - 10pm',
     blurb:
       'Both our ceremony and reception are at the Faculty Club on UC Berkeley campus.',
+  },
+  {
+    label: 'After Party',
+    location: 'TBD',
+    date: 'Friday, August 15',
+    time: '10pm - 2am',
+    blurb:
+      "Don't wanna stop dancing? We are planning an after party! We'll update here when we iron out the details.",
   },
 ];
 
