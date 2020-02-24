@@ -1,23 +1,6 @@
-import React, { ReactElement, CSSProperties } from 'react';
+import React, { ReactElement } from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-
-const navStyle: CSSProperties = {
-  position: 'fixed',
-  minHeight: '5vh',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-evenly',
-  alignItems: 'center',
-  backgroundColor: 'rgba(0, 0, 0, .3)',
-  width: '100%',
-};
-
-const navLinkStyle: CSSProperties = {
-  color: '#fff',
-  textDecoration: 'none',
-  width: '20%',
-  textAlign: 'center',
-};
+import { navStyle, navLinkStyle } from '../constants/style';
 
 const StyledNavLink = ({ destination }: { destination: string }): ReactElement => (
   <NavLink

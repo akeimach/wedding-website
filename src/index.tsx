@@ -1,25 +1,21 @@
-import React, { ReactElement, CSSProperties } from 'react';
+import React, { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { fontStyle } from './constants/style';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Details from './components/Details';
+import Map from './components/Map';
 import Accommodations from './components/Accommodations';
 import * as serviceWorker from './serviceWorker';
 
-export const blockStyle: CSSProperties = {
-  textAlign: 'center',
-  fontSize: '20px',
-  height: '600px',
-  padding: '100px 0',
-};
-
 const App = (): ReactElement => {
   return (
-    <div>
+    <div style={fontStyle}>
       <Nav />
       <Home />
       <Details />
+      <Map />
       <Accommodations />
     </div>
   );
