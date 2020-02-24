@@ -2,6 +2,11 @@ import React, { ReactElement } from 'react';
 import Popover from 'react-tiny-popover';
 import { popoverContainerStyle, calendarLinksStyle, popoverLinkStyle, linkStyle } from '../constants/style';
 
+interface LinkInfo {
+  label: string;
+  href: string;
+};
+
 const event = {
   title: "Alyssa and Danny's Wedding",
   description: 'Come celebrate with us!',
@@ -10,21 +15,33 @@ const event = {
   endTime: '20200816T060000Z',
 };
 
-const googleLink = `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event.startTime}/${event.endTime}&location=${event.location}&text=${event.title}&details=${event.description}`;
+const calendarInfoArray: LinkInfo[] = [
+  {
+    label: 'Google',
+    href: `https://calendar.google.com/calendar/render?action=TEMPLATE&dates=${event.startTime}/${event.endTime}&location=${event.location}&text=${event.title}&details=${event.description}`,
+  },
+  {
+    label: 'Outlook',
+    href: `https://outlook.live.com/owa/?rru=addevent&startdt=${event.startTime}&enddt=${event.endTime}&subject=${event.title}&location=${event.location}&body=${event.description}&allday=false&uid=1582497358565_57287884127&path=/calendar/view/Month`,
+  },
+  {
+    label: 'Yahoo',
+    href: `https://calendar.yahoo.com/?v=60&view=d&type=20&title=${event.title}&st=${event.startTime}&dur=7:00&desc=${event.description}&in_loc=${event.location}`,
 
-const outlookLink = `https://outlook.live.com/owa/?rru=addevent&startdt=${event.startTime}&enddt=${event.endTime}&subject=${event.title}&location=${event.location}&body=${event.description}&allday=false&uid=1582497358565_57287884127&path=/calendar/view/Month`;
+  },
+];
 
-const yahooLink = `https://calendar.yahoo.com/?v=60&view=d&type=20&title=${event.title}&st=${event.startTime}&dur=7:00&desc=${event.description}&in_loc=${event.location}`;
-
-const CalendarLinksPopover = (): ReactElement => (
-  <div style={linkStyle}>
-    Add To Calendar
-    <ul style={calendarLinksStyle}>
-      <li><a href={googleLink} target="_blank" rel="noopener noreferrer" style={linkStyle}>Google</a></li>
-      <li><a href={outlookLink} target="_blank" rel="noopener noreferrer" style={linkStyle}>Outlook</a></li>
-      <li><a href={yahooLink} target="_blank" rel="noopener noreferrer" style={linkStyle}>Yahoo</a></li>
-    </ul>
-  </div>
+const CalendarLink = ({ href, label }: LinkInfo): ReactElement => (
+  <li>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={linkStyle}
+    >
+      {label}
+    </a>
+  </li>
 );
 
 const CalendarLinks = (): ReactElement => {
@@ -34,12 +51,24 @@ const CalendarLinks = (): ReactElement => {
     <Popover
       containerStyle={popoverContainerStyle as Partial<CSSStyleDeclaration>}
       isOpen={popoverOpen}
+      disableReposition={true}
       position={['right', 'bottom']}
-      padding={10}
       onClickOutside={() => setPopoverOpen(false)}
-      content={() => <CalendarLinksPopover />}
+      content={() => (
+        <div style={linkStyle}>
+          Add To Calendar
+          <ul style={calendarLinksStyle}>
+            {calendarInfoArray.map((info: LinkInfo) => <CalendarLink {...info} />)}
+          </ul>
+        </div>
+      )}
     >
-      <button onClick={() => setPopoverOpen(true)} style={popoverLinkStyle}>August 15, 2020</button>
+      <button
+        onClick={() => setPopoverOpen(!popoverOpen)}
+        style={popoverLinkStyle}
+      >
+        August 15, 2020
+      </button>
     </Popover>
   );
 };

@@ -5,7 +5,7 @@ import { detailsStyle, flexRowStyle } from '../constants/style';
 const Details = (): ReactElement => {
   return (
     <div id="Details" style={detailsStyle}>
-      <div>Details</div>
+      <h3>Details</h3>
       <div style={flexRowStyle}>
         <div>
           <MdSchedule />

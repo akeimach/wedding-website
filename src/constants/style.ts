@@ -8,23 +8,16 @@ const fontSizeBody = '20px';
 const fontSizeHome = '25px';
 const notchSize = '50px';
 const calcNotchSize = `calc(100% - ${notchSize})`;
+const boxShadow = '0px 4px 8px rgba(0, 0, 0, 0.2)';
 
-const flex: CSSProperties = {
+export const flexRowStyle: CSSProperties = {
   alignContent: 'center',
   alignItems: 'center',
   display: 'flex',
-};
-
-export const flexColumnStyle: CSSProperties = {
-  ...flex,
-  flexDirection: 'column',
-  padding: '100px 0',
-};
-
-export const flexRowStyle: CSSProperties = {
-  ...flex,
   flexDirection: 'row',
+  flexWrap: 'wrap',
   justifyContent: 'space-evenly',
+  width: '100%',
 };
 
 export const fontStyle: CSSProperties = {
@@ -45,26 +38,24 @@ export const navStyle: CSSProperties = {
   background: translucentDarkGreen,
   minHeight: '5vh',
   position: 'fixed',
-  width: '100%',
   zIndex: 100,
 };
 
 export const navLinkStyle: CSSProperties = {
   ...linkStyle,
   textDecoration: 'none',
-  width: '20%',
+  minWidth: '20%',
 };
 
 export const homeStyle: CSSProperties = {
-  ...flex,
-  flexDirection: 'row',
-  justifyContent: 'center',
+  ...flexRowStyle,
   backgroundAttachment: 'fixed',
   backgroundImage: 'url("../images/eucalyptus-upper.png")',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   minHeight: '100vh',
+  filter: `drop-shadow(${boxShadow})`,
 };
 
 export const notchBoxStyle: CSSProperties = {
@@ -94,13 +85,13 @@ export const popoverLinkStyle: CSSProperties = {
   fontSize: fontSizeHome,
   padding: 0,
   textDecoration: 'underline',
+  outline: 'none',
 };
 
 export const popoverContainerStyle: CSSProperties = {
   background: translucentDarkGreen,
-  borderRadius: '5px',
-  padding: '20px',
-  border: `20px solid ${translucentDarkGreen}`,
+  padding: '30px',
+  boxShadow,
 };
 
 export const calendarLinksStyle: CSSProperties = {
@@ -118,4 +109,20 @@ export const detailsStyle: CSSProperties = {
 export const mapStyle: CSSProperties = {
   height: '50vh',
   width: '100%',
+};
+
+export const accomodationsStyle: CSSProperties = {
+  ...flexRowStyle,
+  alignItems: 'stretch',
+  padding: '100px 0',
+  backgroundImage: 'url("../images/branch-frame.png")',
+  backgroundRepeat: 'no-repeat',
+};
+
+export const hotelBoxStyle: CSSProperties = {
+  maxWidth: '200px',
+  background: white,
+  padding: '30px',
+  margin: '10px',
+  boxShadow,
 };
