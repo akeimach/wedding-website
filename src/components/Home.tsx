@@ -5,8 +5,9 @@ import { homeStyle, notchBoxStyle } from '../constants/style';
 const Home = (): ReactElement => (
   <div id="Home" style={homeStyle}>
     <div style={notchBoxStyle}>
-      <h3>Alyssa and Danny's Wedding</h3>
-      <p>Come celebrate with us!</p>
+      <p>Given the ongoing uncertainty around travel and large gatherings</p>
+      <h3>Alyssa and Danny's wedding reception</h3>
+      <p>is tentatively rescheduled for next year</p>
       <p>
         <CalendarLinks />
         <br />

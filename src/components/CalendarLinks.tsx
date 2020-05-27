@@ -16,8 +16,8 @@ const event = {
   title: "Alyssa and Danny's Wedding",
   description: 'Come celebrate with us!',
   location: 'The Faculty Club, Minor Ln, Berkeley, CA 94720, USA',
-  startTime: '20200815T230000Z',
-  endTime: '20200816T060000Z',
+  startTime: '20210814T230000Z',
+  endTime: '20210815T060000Z',
 };
 
 const calendarInfoArray: LinkInfo[] = [
@@ -68,7 +68,7 @@ const CalendarLinks = (): ReactElement => {
         onClick={() => setPopoverOpen(!popoverOpen)}
         style={popoverLinkStyle}
       >
-        August 15, 2020
+        August 14, 2021
       </button>
     </Popover>
   );
